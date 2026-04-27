@@ -47,9 +47,9 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ steps.vars.outputs.owner_lower }}/runner:2036
+            ghcr.io/runner-8/runner:2036
           labels: |
-            org.opencontainers.image.source=https://github.com/${{ steps.vars.outputs.repo_lower }}
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.description=http server
             org.opencontainers.image.licenses=MIT
           cache-from: type=gha

@@ -1,3 +1,5 @@
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 name: Build huggingface Image
 
 on:
@@ -47,7 +49,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ steps.vars.outputs.owner_lower }}/runner:2036
+            ghcr.io/${{ steps.vars.outputs.owner_lower }}/runner-hugging:2036
           labels: |
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.description=http server
